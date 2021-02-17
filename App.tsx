@@ -5,8 +5,15 @@ import { StyleSheet, Text, SafeAreaView, Image } from "react-native";
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <Image source={require("./assets/favicon.png")} />
-      <Text style={styles.text}>Hello React Native!</Text>
+      <Image
+        source={{
+          width: 350,
+          height: 600,
+          uri: "https://picsum.photos/seed/heyfriend/300/500",
+        }}
+        style={styles.image}
+      />
+      <Text style={styles.text}>A random image for you 😇</Text>
       <StatusBar style="auto" />
     </SafeAreaView>
   );
@@ -15,13 +22,18 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#333344",
+    backgroundColor: "#eeeeee",
     alignItems: "center",
     justifyContent: "center",
   },
+  image: {
+    borderRadius: 30,
+  },
   text: {
+    fontFamily: "monospace",
+    fontWeight: "bold",
     marginTop: 20,
-    color: "#ccc",
-    fontSize: 20,
+    color: "#333",
+    fontSize: 16,
   },
 });
