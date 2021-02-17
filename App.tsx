@@ -1,29 +1,20 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import {
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  SafeAreaView,
-  Image,
-} from "react-native";
+import { StyleSheet, SafeAreaView, Button, Alert } from "react-native";
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <TouchableOpacity activeOpacity={0.75}>
-        <Image
-          source={{
-            width: 300,
-            height: 300,
-            uri: "https://picsum.photos/1080/1920",
-          }}
-          resizeMode="cover"
-          style={styles.image}
-        />
-      </TouchableOpacity>
-      <Text style={styles.text}>A random image for you 😇</Text>
-      <StatusBar style="auto" />
+      <Button
+        title="Clickesh"
+        color="orange"
+        onPress={() => {
+          Alert.alert("Clickeshed", "You clicked me :)", [
+            { text: "Yaas" },
+            { text: "noooo!" },
+          ]);
+        }}
+      ></Button>
     </SafeAreaView>
   );
 }
