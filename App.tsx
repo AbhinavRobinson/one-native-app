@@ -1,20 +1,12 @@
-import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, SafeAreaView, Button, Alert } from "react-native";
+import { StyleSheet, SafeAreaView, View } from "react-native";
+import { useDimensions } from "@react-native-community/hooks";
 
 export default function App() {
+  console.log(useDimensions());
   return (
     <SafeAreaView style={styles.container}>
-      <Button
-        title="Clickesh"
-        color="orange"
-        onPress={() => {
-          Alert.alert("Clickeshed", "You clicked me :)", [
-            { text: "Yaas" },
-            { text: "noooo!" },
-          ]);
-        }}
-      ></Button>
+      <View style={styles.view}></View>
     </SafeAreaView>
   );
 }
@@ -22,18 +14,13 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#eeeeee",
+    backgroundColor: "white",
     alignItems: "center",
     justifyContent: "center",
   },
-  image: {
-    borderRadius: 30,
-  },
-  text: {
-    fontFamily: "monospace",
-    fontWeight: "bold",
-    marginTop: 32,
-    color: "#333",
-    fontSize: 20,
+  view: {
+    backgroundColor: "#333",
+    width: "100%",
+    height: "30%",
   },
 });
