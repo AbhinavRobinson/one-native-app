@@ -17,12 +17,12 @@ export default function App() {
         style={{
           backgroundColor: "gold",
           width: 100,
-          height: 100,
+          height: 400,
           borderRadius: 999,
         }}
       />
-      <View style={{ backgroundColor: "lightblue", width: 100, height: 100 }} />
-      <View style={{ backgroundColor: "tomato", width: 100, height: 100 }} />
+      <View style={{ backgroundColor: "lightblue", width: 50, height: 100 }} />
+      <View style={{ backgroundColor: "tomato", width: 55, height: 25 }} />
     </View>
   );
 }
