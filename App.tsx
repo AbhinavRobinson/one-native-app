@@ -22,7 +22,13 @@ export default function App() {
         }}
       />
       <View style={{ backgroundColor: "lightblue", width: 50, height: 100 }} />
-      <View style={{ backgroundColor: "tomato", width: 55, height: 25 }} />
+      <View
+        style={{
+          backgroundColor: "tomato",
+          width: 55,
+          height: 25,
+        }}
+      />
     </View>
   );
 }
