@@ -7,10 +7,11 @@ export default function App() {
     <SafeAreaView style={styles.container}>
       <Image
         source={{
-          width: 350,
-          height: 600,
-          uri: "https://picsum.photos/seed/heyfriend/300/500",
+          width: 300,
+          height: 300,
+          uri: "https://picsum.photos/1080/1920",
         }}
+        resizeMode="cover"
         style={styles.image}
       />
       <Text style={styles.text}>A random image for you 😇</Text>
@@ -32,8 +33,8 @@ const styles = StyleSheet.create({
   text: {
     fontFamily: "monospace",
     fontWeight: "bold",
-    marginTop: 20,
+    marginTop: 40,
     color: "#333",
-    fontSize: 16,
+    fontSize: 20,
   },
 });
